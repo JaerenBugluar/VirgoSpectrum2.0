@@ -3692,7 +3692,7 @@ end
 end
 end
 --Zen Hub
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/daucoghe2/cotdo/main/cotdo",true))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/JaerenBugluar/SpectrumUI/main/ui%20lib%20spec.lua",true))()
 
 local Win = library:Evil()
 local Tab1 = Win:Tab("General",14477284625)
@@ -3733,7 +3733,7 @@ local Sea2 = Sea:CraftPage(2)
 Sea2:Seperator("Kitsune Island")
 ---------------------------------------------------------------
 
-Sea1:Toggle('Auto TerrorShark / Đánh Terrorshark',nil,function(v)
+Sea1:Toggle('Auto TerrorShark',nil,function(v)
   _G.AutoTerrorshark = v
 end)
 spawn(function()
@@ -3790,7 +3790,7 @@ spawn(function()
   end
 end)
 
-Sea1:Toggle('Auto Piranha / Đánh Cá Piranha',nil,function(v)
+Sea1:Toggle('Auto Piranha',nil,function(v)
   _G.farmpiranya = v
 end)
 spawn(function()
@@ -3847,7 +3847,7 @@ spawn(function()
   end
 end)
 
-Sea1:Toggle('Auto Fish Crew / Đánh Cá Crew',nil,function(v)
+Sea1:Toggle('Auto Fish Crew',nil,function(v)
   _G.AutoFishCrew = v
 end)
 spawn(function()
@@ -3907,7 +3907,7 @@ spawn(function()
   end
 end)
 
-Sea1:Toggle('Auto Shark / Đánh Cá',nil,function(v)
+Sea1:Toggle('Auto Shark',nil,function(v)
   _G.AutoShark = v
 end)
 spawn(function()
@@ -3996,7 +3996,7 @@ end)
 ---------------------------------------------------------------
 Sea1:Seperator("Miscs")
 
-Sea1:Button("Buy Boat / Mua Thuyền",function()
+Sea1:Button("Buy Boat",function()
   toTarget(CFrame.new(-16921.853515625, 9.0863618850708, 433.9601135253906))
         wait(0.5)
         local args = {
@@ -4006,7 +4006,7 @@ Sea1:Button("Buy Boat / Mua Thuyền",function()
       game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))  
 end)
 
-Sea1:Toggle('Tween Boat To Zone 6 / Tp Thuyền Ra Biển 6',nil,function(v)
+Sea1:Toggle('Tween Boat To Zone 6',nil,function(v)
   _G.Zone6 = v
 end)
 spawn(function()
@@ -4033,7 +4033,7 @@ spawn(function()
   end
 end)
 
-Sea1:Toggle('No Clip Rock / Xuyên Đá',nil,function(v)
+Sea1:Toggle('No Clip Rock',nil,function(v)
   _G.Nocliprock = v
 end)
 spawn(function()
@@ -4066,7 +4066,7 @@ spawn(function()
 	end
 end)
 
-Sea1:Toggle('Speed Boat / Tốc Độ Thuyền Nhanh',nil,function(v)
+Sea1:Toggle('Speed Boat',nil,function(v)
   _G.SpeedBoats = v
 end)
 spawn(function()
@@ -4096,7 +4096,7 @@ spawn(function()
   end
 end)
 ---------------------------------------------------------------
-Sea2:Toggle('Tween To Kitsune Island / Tp Đến Đảo Kitsune',nil,function(v)
+Sea2:Toggle('Tween To Kitsune Island',nil,function(v)
   _G.TweenToKitsune = v
 end)
 spawn(function()
@@ -4119,7 +4119,7 @@ spawn(function()
   end
 end)
 
-Sea2:Toggle('Auto Azure Ambers / Nhặt Hồn Lửa',nil,function(v)
+Sea2:Toggle('Auto Azure Ambers',nil,function(v)
   _G.CollectAzure = v
 end)
 spawn(function()
@@ -4135,7 +4135,7 @@ spawn(function()
   end
 end)
 ---Auto Farm Level
-Page1:Toggle('Auto Farm Level / Cày Cấp', _G.Settings.Main["Auto Farm Level"],function(value)
+Page1:Toggle('Auto Farm Level', _G.Settings.Main["Auto Farm Level"],function(value)
   _G.Settings.Main["Auto Farm Level"] = value
   Auto_Farm_Level = value
   if value == false then
@@ -4156,7 +4156,7 @@ Page1:Toggle(
 end
 
 if World3 then
-Page1:Toggle('Auto Pirate Raid / Hải Tặc', _G.AutoPirateRaid,function(value)
+Page1:Toggle('Auto Pirate Raid', _G.AutoPirateRaid,function(value)
   _G.AutoPirateRaid = value
   if value == false then
   toTarget(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)
@@ -4276,7 +4276,7 @@ end
 
 if World2 then
 Page1:Toggle(
-  "Auto Ectoplasm / Vật Chất Kì Dị",
+  "Auto Ectoplasm",
   _G.Settings.Main["Auto Ectoplasm"],
   function(value)
   _G.Settings.Main["Auto Ectoplasm"] = value
@@ -4355,7 +4355,7 @@ end)
 
 if World3 then
 Page1:Toggle(
-  "Auto Farm Bone / Cày Xương",
+  "Auto Farm Bone",
   _G.Settings.Main["Auto Farm Bone"],
   function(value)
   _G.Settings.Main["Auto Farm Bone"] = value
@@ -4866,7 +4866,7 @@ task.spawn(function()
   end)
 
 --Page1:Line()
-Page1:Toggle('Auto Farm Chest / Nhặt Rương',AutoFarmChest,function(value)
+Page1:Toggle('Auto Farm Chest',AutoFarmChest,function(value)
   AutoFarmChest = value
 --CanceltoTarget(AutoFarmChest)
   if value == false then
@@ -4900,12 +4900,12 @@ task.spawn(function()
 
 _G.DistanceNearFarm = 1000
 
-Nears:Slider("Distance Near Farm / Khoảng Cách Farm",true,0,5000,_G.DistanceNearFarm,function(value)
+Nears:Slider("Distance Near Farm",true,0,5000,_G.DistanceNearFarm,function(value)
   _G.DistanceNearFarm = value
   SaveSettings()
   end)
 
-Nears:Toggle("Auto Farm Near / Quái gần",_G.Settings.Main["Near Farm"],function(value)
+Nears:Toggle("Auto Farm Near",_G.Settings.Main["Near Farm"],function(value)
   _G.Settings.Main["Near Farm"] = value
   SaveSettings()
   if value == false then
@@ -4977,7 +4977,7 @@ Page3:Toggle(
   end)
 end
 Page3:Toggle(
-  "Bypass TP / Di Chuyển Reset",
+  "Bypass TP",
   _G.Settings.Configs["Bypass TP"],
   function(value)
   _G.Settings.Configs["Bypass TP"] = value
@@ -4987,7 +4987,7 @@ Page3:Toggle(
 --Page3:Line()
 
 Page3:Toggle(
-  "Fast Attack / Đánh Nhanh",
+  "Fast Attack",
   _G.Settings.Configs["Fast Attack"],
   function(value)
   _G.Settings.Configs["Fast Attack"] = value
@@ -4996,7 +4996,7 @@ Page3:Toggle(
   
   
 
-Page3:Dropdown("Fast Attack Type / Chọn Đánh Nhanh",
+Page3:Dropdown("Fast Attack Type",
   {
     "Fast","Normal","Slow"
   },_G.Settings.Configs["Fast Attack Type"],
@@ -5031,7 +5031,7 @@ coroutine.wrap(function()
 --Page3:Line()
 
 -- [Table Weapon]
-Page3:Dropdown("Select Weapon / Chọn Vũ Khí",{
+Page3:Dropdown("Select Weapon",{
     "Melee",
   "Sword",
   "Fruit"},_G.Settings.Configs["Select Weapon"],
@@ -5085,7 +5085,7 @@ local Miscon = Tab1:CraftPage(2)
 Miscon:Seperator("Misc Config")
 
 Miscon:Toggle(
-  "Auto Haki / Bật Haki",
+  "Auto Haki",
   _G.Settings.Configs["Auto Haki"],
   function(value)
   _G.Settings.Configs["Auto Haki"] = value
@@ -5104,7 +5104,7 @@ task.spawn(function()
   end)
 
 Miscon:Slider(
-  "Distance Auto Farm / Độ Cao Farm",true,
+  "Distance Auto Farm",true,
   0,
   60,
   _G.Settings.Configs["Distance Auto Farm"],
@@ -5127,7 +5127,7 @@ Mobcon:Seperator(
   "Mob Configs")
 
 Mobcon:Toggle(
-  "Bring Mob / gom Quái",
+  "Bring Mob",
   _G.Settings.Configs["Bring Mob"],
   function(value)
   _G.Settings.Configs["Bring Mob"] = value
@@ -5135,7 +5135,7 @@ Mobcon:Toggle(
   end)
 
 Mobcon:Toggle(
-  "Show Hitbox / Hiện HitBox",
+  "Show Hitbox",
   _G.Settings.Configs["Show Hitbox"],
   function(value)
   _G.Settings.Configs["Show Hitbox"] = value
@@ -5152,7 +5152,7 @@ Mobcon:Slider(
   end)
 
 Mobcon:Toggle(
-  "Disabled Text Damage / Ẩn Dame",
+  "Disabled Text Damage",
   _G.Settings.Configs["Disabled Damage"],
   function(value)
   _G.Settings.Configs["Disabled Damage"] = value
@@ -5194,7 +5194,7 @@ MasteryCon:Toggle(
   SaveSettings()
   end)
 
-MasteryCon:Seperator("Hold Skill / Giữ Skill Khi Farm Thông Thạo")
+MasteryCon:Seperator("Hold Skill")
 
 MasteryCon:Slider("Hold Skill Z",true,0,100,1,function(value)
   _G.HoldZ = value
@@ -5216,7 +5216,7 @@ local Page8 = Tab1:CraftPage(2)
 Page8:Seperator("Codes")
 
 Page8:Toggle(
-  "Redeem Code / Nhập Code",
+  "Redeem Code",
   _G.Settings.Stat["Enabled Auto Redeem Code"],
   function(value)
   _G.Settings.Stat["Enabled Auto Redeem Code"] = value
@@ -5224,7 +5224,7 @@ Page8:Toggle(
   end)
 
 Page8:Slider(
-  "Redeem Select Level / Level Nhập Code",true,
+  "Redeem Select Level",true,
   0,
   2425,
   _G.Settings.Stat["Select Level Redeem Code"],
@@ -5323,15 +5323,15 @@ end
 end
 
 if World1 then
-Farms1:Seperator("Farm Materail / Cày Nguyên Liệu")
+Farms1:Seperator("Farm Materail")
 
-Farms1:Dropdown("Select Material / Chọn Nguyên Liệu", AllMaterial, {
+Farms1:Dropdown("Select Material", AllMaterial, {
   ""
 },function(value)
   SelectModeMaterial = value
   end)
 
-Farms1:Toggle("Auto Farm Material / Cày Nguyên Liệu", AutoFarmMaterial,function(x)
+Farms1:Toggle("Auto Farm Material", AutoFarmMaterial,function(x)
   AutoFarmMaterial = x
 --CanceltoTarget(AutoFarmMaterial)
   if x == false then
@@ -5407,15 +5407,15 @@ Farms1:Toggle("Auto Farm Material / Cày Nguyên Liệu", AutoFarmMaterial,funct
     end)
   end)
 elseif World2 then
-Farms1:Seperator("Farm Materail / Cày Nguyên Liệu")
+Farms1:Seperator("Farm Materail")
 
-Farms1:Dropdown("Select Material / Chọn Nguyên Liệu", AllMaterial, {
+Farms1:Dropdown("Select Material", AllMaterial, {
   ""
 },function(value)
   SelectModeMaterial = value
   end)
 
-Farms1:Toggle("Auto Farm Material / Cày Nguyên Liệu", AutoFarmMaterial,function(x)
+Farms1:Toggle("Auto Farm Material", AutoFarmMaterial,function(x)
   AutoFarmMaterial = x
 --CanceltoTarget(AutoFarmMaterial)
   if x == false then
@@ -5472,7 +5472,7 @@ Farms1:Toggle("Auto Farm Material / Cày Nguyên Liệu", AutoFarmMaterial,funct
     end)
   end)
 Farms1:Toggle(
-  "Auto Material Soul Guitar / Lấy Soul Guitar",
+  "Auto Material Soul Guitar",
   _G.Settings.Main["Auto Material Soul Guitar"],
   function(value)
   _G.Settings.Main["Auto Material Soul Guitar"] = value
@@ -5485,15 +5485,15 @@ Farms1:Toggle(
   end
 )
 elseif World3 then
-Farms1:Seperator("Farm Material / Cày Nguyên Liệu")
+Farms1:Seperator("Farm Material")
 
-Farms1:Dropdown("Select Material / Chọn Nguyên Liệu", AllMaterial, {
+Farms1:Dropdown("Select Material", AllMaterial, {
   ""
 },function(value)
   SelectModeMaterial = value
   end)
 
-Farms1:Toggle("Auto Farm Material / Cày Nguyên Liệu", AutoFarmMaterial,function(x)
+Farms1:Toggle("Auto Farm Material", AutoFarmMaterial,function(x)
   AutoFarmMaterial = x
   if x == false then
   toTarget(game.Players.LocalPlayer.Character.HumanoidRootPart.Position,game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
@@ -5552,7 +5552,7 @@ if World1 then
 --World3:Line()
 local World1 = Farms:CraftPage(1)
 World1:Seperator("First Sea")
-World1:Toggle("Auto New World / Qua Sea 2",_G.Settings.Main["Auto New World"],function(value)
+World1:Toggle("Auto Sea 2",_G.Settings.Main["Auto New World"],function(value)
   _G.Settings.Main["Auto New World"] = value
 --CanceltoTarget(_G.Settings.Main["Auto New World"])
   if value == false then
@@ -5653,7 +5653,7 @@ spawn(function()
   end)
 
 
-World1:Toggle("Auto Saber / Lấy Saber",_G.Settings.Main["Auto Saber"],function(value)
+World1:Toggle("Auto Saber",_G.Settings.Main["Auto Saber"],function(value)
   _G.Settings.Main["Auto Saber"] = value
 --CanceltoTarget(_G.Settings.Main["Auto Saber"])
   if value == false then
@@ -5805,7 +5805,7 @@ World1:Toggle("Auto Saber / Lấy Saber",_G.Settings.Main["Auto Saber"],function
     end)
   end)
 
-World1:Toggle("Auto Saber Hop / Lấy Saber Hop",false,function(value)
+World1:Toggle("Auto Saber Hop",false,function(value)
   Hop()
   end)
 
@@ -5823,7 +5823,7 @@ spawn(function()
   end
   end)
 
-World1:Toggle("Auto Pole / Lấy Pole",_G.Settings.Main["Auto Pole"],function(value)
+World1:Toggle("Auto Pole",_G.Settings.Main["Auto Pole"],function(value)
   _G.Settings.Main["Auto Pole"] = value
 --CanceltoTarget(_G.Settings.Main["Auto Pole"])
   if value == false then
@@ -5894,7 +5894,7 @@ World1:Toggle("Auto Pole / Lấy Pole",_G.Settings.Main["Auto Pole"],function(va
     end)
   end)
 -- [World 2 Main Page]
-World1:Toggle("Auto Pole V1 Hop / Lấy Pole Hop",false,function(value)
+World1:Toggle("Auto Pole V1 Hop",false,function(value)
   Hop()
   end)
 
@@ -5904,7 +5904,7 @@ World2:Seperator("Second Sea")
 
 
 World2:Toggle(
-  "Auto Third World / Qua Sea 3",
+  "Auto Third Sea",
   _G.Settings.Main["Auto Third Sea"],
   function(value)
   _G.Settings.Main["Auto Third Sea"] = value
@@ -6208,7 +6208,7 @@ World2:Toggle(
   end)
 
 World2:Toggle(
-  "Auto Bartilo Quest / Nhiệm Vụ Bartilo",
+  "Auto Bartilo Quest",
   _G.Settings.Main["Auto Bartilo Quest"],
   function(value)
   _G.Settings.Main["Auto Bartilo Quest"] = value
@@ -6394,7 +6394,7 @@ spawn(function()
   end)
 
 World2:Toggle(
-  "Auto Dark Coat / Lấy Áo Choàng Râu Đen",
+  "Auto Dark Coat",
   _G.Settings.Main["Auto Dark Coat"],
   function(value)
   _G.Settings.Main["Auto Dark Coat"] = value
@@ -6455,14 +6455,14 @@ World2:Toggle(
     end)
   end)
 
-World2:Toggle("Auto Dark Coat Hop / áo choàng râu đen Hop",false,function(value)
+World2:Toggle("Auto Dark Coat Hop",false,function(value)
   Hop()
   end)
 
 World2:Seperator("Factory")
 --World2:Line()
 World2:Toggle(
-  "Auto Factory / Đánh Nhà Máy",
+  "Auto Factory",
   _G.Settings.Main["Auto Factory"],
   function(value)
   _G.Settings.Main["Auto Factory"] = value
@@ -6536,7 +6536,7 @@ World2:Toggle(
   end)
 
 World2:Toggle(
-  "Auto Factory Hop / Đánh Nhà Máy Hop",
+  "Auto Factory Hop",
   _G.Settings.Main["Auto Factory Hop"],
   function(value)
   _G.Settings.Main["Auto Factory Hop"] = value
@@ -6568,7 +6568,7 @@ spawn(function()
   end)
 
 World2:Toggle(
-  "Auto True Triple Katana / Lấy Tam Kiếm Zoro",
+  "Auto True Triple Katana",
   _G.Settings.Main["Auto True Triple Katana"],
   function(value)
   _G.Settings.Main["Auto True Triple Katana"] = value
@@ -6604,7 +6604,7 @@ end
 end
 
 World2:Toggle(
-  "Auto Rengoku Swords / Lấy Rengoku",
+  "Auto Rengoku Swords",
   _G.Settings.Main["Auto Rengoku"],
   function(value)
   _G.Settings.Main["Auto Rengoku"] = value
@@ -6668,7 +6668,7 @@ World2:Toggle(
     end)
   end)
 
-World2:Toggle("Auto Rengoku Hop / Lấy Rengoku Hop",false,function(value)
+World2:Toggle("Auto Rengoku Hop",false,function(value)
   Hop()
   end)
 
@@ -6689,7 +6689,7 @@ spawn(function()
   end)
 
 World2:Toggle(
-  "Auto Swan Glasses / Lấy kính Swan",
+  "Auto Swan Glasses",
   _G.Settings.Main["Auto Swan Glasses"],
   function(value)
   _G.Settings.Main["Auto Swan Glasses"] = value
@@ -6750,7 +6750,7 @@ World2:Toggle(
     end)
   end)
 
-World2:Toggle("Auto Swan Glasses Hop / Lấy Kính Swan",false,function(value)
+World2:Toggle("Auto Swan Glasses Hop",false,function(value)
   Hop()
   end)
 
@@ -6765,7 +6765,7 @@ World2:Toggle("Auto Swan Glasses Hop / Lấy Kính Swan",false,function(value)
 World2:Seperator(
   "Auto Buy")
 
-World2:Toggle("Auto Buy Legendary Sword / Mua Kiếm Vip",_G.Settings.Main["Auto Buy Legendary Sword"],function(value)
+World2:Toggle("Auto Buy Legendary Sword",_G.Settings.Main["Auto Buy Legendary Sword"],function(value)
   _G.Settings.Main["Auto Buy Legendary Sword"] = value
   SaveSettings()
 
@@ -6783,7 +6783,7 @@ World2:Toggle("Auto Buy Legendary Sword / Mua Kiếm Vip",_G.Settings.Main["Auto
   end)
 
 World2:Toggle(
-  "Auto Buy Enchanment Haki / Mua Màu Haki",
+  "Auto Buy Enchanment Haki",
   _G.Settings.Main["Auto Buy Enchanment Haki"],
   function(value)
   _G.Settings.Main["Auto Buy Enchanment Haki"] = value
@@ -6809,7 +6809,7 @@ local World3 = Farms:CraftPage(1)
 World3:Seperator("Third Sea")
 --World3:Line()
 World3:Toggle(
-  "Auto Holy Torch / Thắp Đuốc Lấy Tushita",
+  "Auto Holy Torch",
   _G.Settings.Main["Auto Holy Torch"],
   function(value)
   _G.Settings.Main["Auto Holy Torch"] = value
@@ -6842,7 +6842,7 @@ DoughMob = {
   "Cookie Crafter","Cake Guard","Baking Staff"
 }
 World3:Toggle(
-  "Auto Dough V2 / Katakuri v2",
+  "Auto Dough V2",
   _G.Settings.Main["Auto Dough V2"],
   function(value)
   _G.Settings.Main["Auto Dough V2"] = value
@@ -7108,7 +7108,7 @@ spawn(function()
   end)
 
 World3:Toggle(
-  "Auto Rainbow Haki / Lấy Haki cầu vòng",
+  "Auto Rainbow Haki",
   _G.Settings.Main["Auto Rainbow Haki"],
   function(value)
   _G.Settings.Main["Auto Rainbow Haki"] = value
@@ -7347,7 +7347,7 @@ World3:Toggle(
   end)
 
 World3:Toggle(
-  "Auto Musketeer Hat / Lấy Nón Musketeer",
+  "Auto Musketeer Hat",
   _G.Settings.Main["Auto Musketeer Hat"],
   function(value)
   _G.Settings.Main["Auto Musketeer Hat"] = value
@@ -7470,7 +7470,7 @@ World3:Toggle(
   end)
 
 World3:Toggle(
-  "Auto Ken-Haki V2 / Lấy Haki Ken V2",
+  "Auto Ken-Haki V2",
   _G.Settings.Main["Auto Ken-Haki V2"],
   function(value)
   _G.Settings.Main["Auto Ken-Haki V2"] = value
@@ -7649,7 +7649,7 @@ task.spawn(function()
   end)
 
 World3:Toggle(
-  "Auto Cake Prince / Tư Lệnh Bột",
+  "Auto Cake Prince",
   _G.Settings.Main["Auto Cake Prince"],
   function(value)
   _G.Settings.Main["Auto Cake Prince"] = value
@@ -7801,7 +7801,7 @@ spawn(function()
   end)
 
 World3:Toggle(
-  "Auto Elite Hunter / Boss Bí Ẩn",
+  "Auto Elite Hunter",
   _G.Settings.Main["Auto Elite Hunter"],
   function(value)
   _G.Settings.Main["Auto Elite Hunter"] = value
@@ -7962,7 +7962,7 @@ spawn(function()
 
 
 World3:Toggle(
-  "Auto Buddy Swords / Lấy Buddy",
+  "Auto Buddy Swords",
   _G.Settings.Main["Auto Buddy Swords"],
   function(value)
   _G.Settings.Main["Auto Buddy Swords"] = value
@@ -8036,7 +8036,7 @@ spawn(function()
   end)
 
 World3:Toggle(
-  "Auto Hallow Sycthe Boss / Lấy Lưỡi Hái",
+  "Auto Hallow Sycthe Boss",
   _G.Settings.Main["Auto Farm Boss Hallow"],
   function(value)
   _G.Settings.Main["Auto Farm Boss Hallow"] = value
@@ -8114,7 +8114,7 @@ spawn(function()
 
 
 World3:Toggle(
-  "Auto Cavander / Lấy Canvender",
+  "Auto Cavander",
   _G.Settings.Main["Auto Cavander"],
   function(value)
   _G.Settings.Main["Auto Cavander"] = value
@@ -8181,7 +8181,7 @@ local progelit = tostring(game:GetService("ReplicatedStorage").Remotes.CommF_:In
 killedelite:Set("Elite Killed : "..progelit)
 
 World3:Toggle(
-  "Auto Yama Sword / Lấy Yama",
+  "Auto Yama Sword",
   _G.Settings.Main["Auto Yama Sword"],
   function(value)
   _G.Settings.Main["Auto Yama Sword"] = value
@@ -8202,7 +8202,7 @@ World3:Toggle(
 World3:Seperator("Tushita Sword")
 
 World3:Toggle(
-  "Auto Kill Tushita Boss / Đánh Boss Tushita",
+  "Auto Kill Tushita Boss",
   _G.Settings.Main["Auto Tushita Sword"],
   function(value)
   _G.Settings.Main["Auto Tushita Sword"] = value
@@ -8260,7 +8260,7 @@ World3:Toggle(
     end)
   end)
 
-World3:Toggle('Auto Fully Tushita / Lấy Tushita Fully', AutoTushita, function(autotushitafunc)
+World3:Toggle('Auto Fully Tushita', AutoTushita, function(autotushitafunc)
   AutoTushita = autotushitafunc
   end)
 spawn(function()
@@ -8417,7 +8417,7 @@ spawn(function()
   end)
 
 World3:Toggle(
-  "Auto Serpent Bow / Lấy Cung",
+  "Auto Serpent Bow",
   _G.Settings.Main["Auto Serpent Bow"],
   function(value)
   _G.Settings.Main["Auto Serpent Bow"] = value
@@ -8492,7 +8492,7 @@ spawn(function()
 
 
 World3:Toggle(
-  "Auto Dark Dagger / Lấy Yoru Mini",
+  "Auto Dark Dagger",
   _G.Settings.Main["Auto Dark Dagger"],
   function(value)
   _G.Settings.Main["Auto Dark Dagger"] = value
@@ -8562,7 +8562,7 @@ World3:Label(
 )
 
 World3:Toggle(
-  "Auto Quest Soul Guitar / Làm Nv Soul Guitar",
+  "Auto Quest Soul Guitar",
   _G.Settings.Main["Auto Quest Soul Guitar"],
   function(value)
   _G.Settings.Main["Auto Quest Soul Guitar"] = value
@@ -8718,7 +8718,7 @@ spawn(function()
   end)
 
 World3:Toggle(
-  "Auto Cursed Dual Katana / Lấy CDK",
+  "Auto Cursed Dual Katana",
   Auto_Cursed_Dual_Katana,
   function(value)
   Auto_Cursed_Dual_Katana = value
@@ -9326,7 +9326,7 @@ World3:Label(
 World3:Label("Yama Quest")
 
 World3:Toggle(
-  "Yama Quest : 1 / Làm Nv Yama",
+  "Yama Quest : 1",
   YamaQuest1,
   function(value)
   YamaQuest1 = value
@@ -9352,7 +9352,7 @@ World3:Toggle(
   end)
 
 World3:Toggle(
-  "Yama Quest : 2 / Làm Nv Yama",
+  "Yama Quest : 2",
   YamaQuest2,
   function(value)
   YamaQuest2 = value
@@ -10796,7 +10796,7 @@ spawn(function()
 	end
 
 
-local Boss_Dropdown = Page5:Dropdown("Select Boss / Chọn Boss",
+local Boss_Dropdown = Page5:Dropdown("Select Boss",
   BossTable,"",
   function(value)
   _G.Settings.Boss["Select Boss"] = value
@@ -10805,7 +10805,7 @@ local Boss_Dropdown = Page5:Dropdown("Select Boss / Chọn Boss",
 
 
 Page5:Toggle(
-  "Auto Farm All Boss / Đánh Tất Cả boss",
+  "Auto Farm All Boss",
   _G.Settings.Boss["Auto All Boss"],
   function(value)
   _G.Settings.Boss["Auto All Boss"] = value
@@ -10971,7 +10971,7 @@ task.spawn(function()
 --Page5:Line()
 
 Page5:Toggle(
-  "Auto Farm Boss Select / Đánh Boss Chọn",
+  "Auto Farm Boss Select",
   _G.Settings.Boss["Auto Boss Select"],
   function(value)
   _G.Settings.Boss["Auto Boss Select"] = value
@@ -11103,7 +11103,7 @@ task.spawn(function()
   end)
 
 Page5:Toggle(
-  "Auto Quest Boss / Nhận Nv Boss",
+  "Auto Quest Boss",
   _G.Settings.Boss["Auto Quest"],
   function(value)
   _G.Settings.Boss["Auto Quest"] = value
@@ -11495,7 +11495,7 @@ return game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(name) or g
 end
 
 SwordListFarmComplete = {};
-Page6:Toggle("Auto Farm Sword Mastery / Cày Thông Thạo Kiếm", _G.Settings.Mastery["Farm Mastery SwordList"],function(x)
+Page6:Toggle("Auto Farm Sword Mastery", _G.Settings.Mastery["Farm Mastery SwordList"],function(x)
   _G.Settings.Mastery["Farm Mastery SwordList"] = x
   if x == false then
   toTarget(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
@@ -11560,7 +11560,7 @@ Page6:Toggle("Auto Farm Sword Mastery / Cày Thông Thạo Kiếm", _G.Settings.
   end)
 
 Page6:Toggle(
-  "Auto Fruit Mastery / Cày thông Thạo Trái",
+  "Auto Fruit Mastery",
   _G.Settings.Mastery["Auto Farm Fruit Mastery"],
   function(value)
   _G.Settings.Mastery["Auto Farm Fruit Mastery"] = value
@@ -11573,7 +11573,7 @@ Page6:Toggle(
   end)
 
 Page6:Toggle(
-  "Auto Gun Mastery / Cày Thông Thạo Súng",
+  "Auto Gun Mastery",
   _G.Settings.Mastery["Auto Farm Gun Mastery"],
   function(value)
   _G.Settings.Mastery["Auto Farm Gun Mastery"] = value
@@ -11584,7 +11584,7 @@ Page6:Toggle(
   end)
 
 Page6:Slider(
-  "Mob Health (%) / Máu Quái",true,
+  "Mob Health (%)",true,
   0,
   100,
   _G.Settings.Mastery["Mob Health (%)"],
@@ -11615,7 +11615,7 @@ spawn(function()
 local Chestp = Tab1:CraftPage(1)
 Chestp:Seperator("Esp Sections")
 
-Chestp:Toggle('Chest ESP / Esp Rương', false, function(ce)
+Chestp:Toggle('Chest ESP', false, function(ce)
   ChestESP = ce
   end)
 spawn(function()
@@ -11671,7 +11671,7 @@ spawn(function()
   end
   end)
 
-Chestp:Toggle('Player ESP / Esp Người Chơi', false, function(pe)
+Chestp:Toggle('Player ESP', false, function(pe)
   PlayerESP = pe
   end)
 spawn(function()
@@ -11725,7 +11725,7 @@ spawn(function()
   end
   end)
 
-Chestp:Toggle('Devil Fruit ESP / Esp Trái Ác Quỷ', _G.ESPDF, function(dfespf)
+Chestp:Toggle('Devil Fruit ESP', _G.ESPDF, function(dfespf)
   _G.ESPDF = dfespf
   end)
 spawn(function()
@@ -11774,7 +11774,7 @@ spawn(function()
   end
   end)
 
-Chestp:Toggle('Fruit ESP / Esp Trái Cây', false, function(fec)
+Chestp:Toggle('Fruit ESP', false, function(fec)
   FruitESPe = fec
   end)
 spawn(function()
@@ -11837,7 +11837,7 @@ spawn(function()
   end
   end)
 
-Chestp:Toggle('Island ESP / Esp Đảo', false, function(ies)
+Chestp:Toggle('Island ESP', false, function(ies)
   IslandESP = ies
   end)
 spawn(function()
@@ -11882,7 +11882,7 @@ spawn(function()
   end
   end)
 
-Chestp:Toggle('Npc ESP / Esp Npc', false, function(nec)
+Chestp:Toggle('Npc ESP', false, function(nec)
   NpcESP = nec
   end)
 spawn(function()
@@ -11929,7 +11929,7 @@ spawn(function()
 
 Page9:Seperator("Auto Stats")
 
-Page9:Dropdown("Select Stats / Chọn Điểm",
+Page9:Dropdown("Select Stats",
   {
     "Max Stats","Melee","Defense","Sword","Gun","Devil Fruits"
   }, {
@@ -12001,7 +12001,7 @@ Page9:Dropdown("Select Stats / Chọn Điểm",
   end)
 
 Page9:Slider(
-  "Point Select / Chọn Chỉ số", true,
+  "Point Select", true,
   0,
   9,
   _G.Settings.Stat["Point Select"],
@@ -12011,7 +12011,7 @@ Page9:Slider(
 
 
 Page9:Toggle(
-  "Auto Stats / Nâng Chỉ Số",
+  "Auto Stats",
   _G.Settings.Stat["Enabled Auto Stats"],
   function(value)
   _G.Settings.Stat["Enabled Auto Stats"] = value
@@ -12019,7 +12019,7 @@ Page9:Toggle(
   end)
 
 Page9:Toggle(
-  "Auto Stat Kaitun / Nâng Chỉ số Tự động",
+  "Auto Stat Kaitun",
   _G.Settings.Stat["Auto Stats Kaitun"],
   "Will Up Melee to 2400 First then Up def",
   function(value)
@@ -12051,64 +12051,64 @@ spawn(function()
 
 Page9:Seperator("Fake Stats")
 
-Page9:Toggle("Enabled Fake / Bật Làm Gỉa",true,function(value)
+Page9:Toggle("Enabled Fake",true,function(value)
   _G.EnabledStat = value
   end)
 
-Page9:Textbox("Level / Cấp","",function(value)
+Page9:Textbox("Level","",function(value)
   if _G.EnabledStat then
   game:GetService("Players")["LocalPlayer"].Data.Level.Value = tonumber(value)
   end
   end)
 
-Page9:Textbox("Exp / Kinh Nghiệm","",function(value)
+Page9:Textbox("Exp","",function(value)
   if _G.EnabledStat then
   game:GetService("Players")["LocalPlayer"].Data.Exp.Value = tonumber(value)
   end
   end)
 
-Page9:Textbox("Beli / Tiền","",function(value)
+Page9:Textbox("Beli","",function(value)
   if _G.EnabledStat then
   game:GetService("Players")["LocalPlayer"].Data.Beli.Value = tonumber(value)
   end
   end)
 
-Page9:Textbox("Fragments / Điểm F Tím","",function(value)
+Page9:Textbox("Fragments","",function(value)
   if _G.EnabledStat then
   game:GetService("Players")["Localplayer"].Data.Fragments.Value = tonumber(value)
   end
   end)
 
-Page9:Textbox("Melee / Chỉ Số Cận Chiến","",function(value)
+Page9:Textbox("Melee","",function(value)
   if _G.EnabledStat then
   game:GetService("Players")["LocalPlayer"].Data.Stats.Melee.Level.Value = tonumber(value)
   end
   end)
 
-Page9:Textbox("Defense / Chỉ số Máu","",function(value)
+Page9:Textbox("Defense","",function(value)
   if _G.EnabledStat then
   game:GetService("Players")["LocalPlayer"].Data.Stats.Defense.Level.Value = tonumber(value)
   end
   end)
 
-Page9:Textbox("Sword / Chỉ Số Kiếm","",function(value)
+Page9:Textbox("Sword","",function(value)
   if _G.EnabledStat then
   game:GetService("Players")["LocalPlayer"].Data.Stats.Sword.Level.Value = tonumber(value)
   end
   end)
 
-Page9:Textbox("Gun / Chỉ Số Súng","",function(value)
+Page9:Textbox("Gun","",function(value)
   if _G.EnabledStat then
   game:GetService("Players")["LocalPlayer"].Data.Stats.Gun.Level.Value = tonumber(value)
   end
   end)
-Page9:Textbox("Fruit / Chỉ số Trái Ác Quỷ","",function(value)
+Page9:Textbox("Fruit","",function(value)
   if _G.EnabledStat then
   game:GetService("Players")["LocalPlayer"].Data.Stats["Demon Fruit"].Level.Value = tonumber(value)
   end
   end)
 
-Page9:Textbox("Bounty / Tiền Thưởng","",function(value)
+Page9:Textbox("Bounty","",function(value)
   if _G.EnabledStat then
   game:GetService("Players")["LocalPlayer"].leaderstats["Bounty/Honor"].Value = tonumber(value)
   end
@@ -12119,13 +12119,13 @@ if World3 then
 local RaceV4 = RaceMirage:CraftPage(1)
 RaceV4:Seperator("Auto Trials")
 
-RaceV4:Dropdown("Select Trial Race / Chọn Tộc", {
+RaceV4:Dropdown("Select Trial Race", {
   "Angel","Mink","Cyborg"
 },"",function(value)
   _G.SelectRace = value
   end)
 
-RaceV4:Toggle("Auto Select Trial Race / Hoàn Thành Ải",false,function(value)
+RaceV4:Toggle("Auto Select Trial Race",false,function(value)
   _G.TeleportRace = value
   if _G.TeleportRace == true then
   repeat wait()
@@ -12140,7 +12140,7 @@ RaceV4:Toggle("Auto Select Trial Race / Hoàn Thành Ải",false,function(value)
   end
 end)
 
-RaceV4:Toggle("Auto Complete All Trial / Hoàn Thành Tất Ải",false,function(value)
+RaceV4:Toggle("Auto Complete All Trial",false,function(value)
   _G.AutoQuestRace = value
   end)
 
@@ -12276,10 +12276,10 @@ Islandplace = {
   "Sky Door"
 }
 
-RaceV4:Dropdown("Select Place / Chọn Cửa Ải",Islandplace,"",function(value)
+RaceV4:Dropdown("Select Place",Islandplace,"",function(value)
   _G.SelectIslandRace = value
   end)
-RaceV4:Toggle("Tween to Selected / Đến Nơi Đã Chọn",_G.TeleportDoor,function(value)
+RaceV4:Toggle("Tween to Selected",_G.TeleportDoor,function(value)
   _G.TeleportDoor = value
   if _G.TeleportDoor == true then
   repeat wait()
@@ -12309,10 +12309,10 @@ RaceV4:Toggle("Tween to Selected / Đến Nơi Đã Chọn",_G.TeleportDoor,func
   end)
 
 RaceV4:Seperator("Others")
-RaceV4:Button("Auto Upgrade Tier / Mua Bánh Răng",function(t)
+RaceV4:Button("Auto Upgrade Tier",function(t)
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer('UpgradeRace','Buy')
   end)
-RaceV4:Button("Unlock Lever / Mở Khoá Cần Gạt", function()
+RaceV4:Button("Unlock Lever", function()
   venyx:Notify("Unlocked")
   if game:GetService("Workspace").Map["Temple of Time"].Lever.Prompt:FindFirstChild("ProximityPrompt") then
   game:GetService("Workspace").Map["Temple of Time"].Lever.Prompt:FindFirstChild("ProximityPrompt"):Remove()
@@ -12403,7 +12403,7 @@ spawn(function()
     end)
   end)
 
-Mirrages:Toggle("Tween Mirage Island / Tp Đến Đảo Kì Bí",false,function(value)
+Mirrages:Toggle("Tween Mirage Island",false,function(value)
   _G.Mirage = value
 --CanceltoTarget(_G.Mirage)
 end)
@@ -12425,7 +12425,7 @@ spawn(function()
         end
     end)
 end)
-Mirrages:Toggle("Teleport To Gear / Tp Đến Bánh Răng",false,function(value)
+Mirrages:Toggle("Teleport To Gear",false,function(value)
   _G.TweenMGear = value
   end)
 
@@ -12446,7 +12446,7 @@ spawn(function()
     end
     end)
 end)
-Mirrages:Toggle("Teleport To Highest Point / Tp Đến Nơi Cao Nhất",false,function(value)
+Mirrages:Toggle("Teleport To Highest Point",false,function(value)
  TwenetoHighestPoint()
 end)
 
@@ -12487,7 +12487,7 @@ toTarget(BlueGear.CFrame)
 end
 end
 
-Mirrages:Toggle("Auto Look To Moon / Nhìn Trăng",false,function(value)
+Mirrages:Toggle("Auto Look To Moon",false,function(value)
   _G.MoonLook = value
 end)
 
@@ -12501,7 +12501,7 @@ end
 end
 end
 
-Mirrages:Toggle("Collect Chest [Mirrage Island] / Nhặt Rương",false,function(value)
+Mirrages:Toggle("Collect Chest [Mirrage Island]",false,function(value)
   _G.GrabChestMirrage = value
   end)
 
@@ -12525,7 +12525,7 @@ spawn(function()
   end
   end)
 
-Mirrages:Toggle("TP Advance BloxFruit Dealer / Tp Đến Npc Bán Trái",false,function(value)
+Mirrages:Toggle("TP Advance BloxFruit Dealer",false,function(value)
   _G.BloxFruitsDealer = value
   end)
 
@@ -12549,7 +12549,7 @@ end)
   end
   end)
 
-Mirrages:Button("Remove Fog / Xoá Xương",function(value)
+Mirrages:Button("Remove Fog",function(value)
  NoFog()
 end)
 
@@ -12598,22 +12598,22 @@ FruitList = {
   "Leopard-Leopard"
 }
 
-DevilFruit:Dropdown("Select Fruits Sniper / Chọn Trái",FruitList,"",function(value)
+DevilFruit:Dropdown("Select Fruits Sniper",FruitList,"",function(value)
   _G.SelectFruit = value
   end)
 
-DevilFruit:Toggle("Auto Buy Fruit Sniper / Mua Trái",_G.AutoBuyFruitSniper,function(value)
+DevilFruit:Toggle("Auto Buy Fruit Sniper",_G.AutoBuyFruitSniper,function(value)
   _G.AutoBuyFruitSniper = value
   end)
 
 
 DevilFruit:Seperator("Others")
 
-DevilFruit:Dropdown("Select Fruits Eat / Chọn Trái",FruitList,function(value)
+DevilFruit:Dropdown("Select Fruits Eat",FruitList,function(value)
   _G.SelectFruitEat = value
   end)
 
-DevilFruit:Toggle("Auto Eat Fruit / Ăn Trái",_G.AutoEatFruit,function(value)
+DevilFruit:Toggle("Auto Eat Fruit",_G.AutoEatFruit,function(value)
   _G.AutoEatFruit = value
   end)
 
@@ -12653,7 +12653,7 @@ spawn(function()
   end)
 
 DevilFruit2:Seperator("More")
-DevilFruit2:Toggle("Get Fruit Inventory Under 1M / Lấy Trái < 1M",_G.Get_Fruit,function(vu)
+DevilFruit2:Toggle("Get Fruit Inventory Under 1M",_G.Get_Fruit,function(vu)
   _G.Get_Fruit = vu
   end)
 spawn(function()
@@ -12680,7 +12680,7 @@ DevilFruit2:Button("Random Fruit",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Cousin","Buy")
   end)
 
-DevilFruit2:Toggle("Auto Random Fruit / Đổi Trái",_G.Random_Auto,function(value)
+DevilFruit2:Toggle("Auto Random Fruit",_G.Random_Auto,function(value)
   _G.Random_Auto = value
   end)
 
@@ -12694,7 +12694,7 @@ spawn(function()
     end)
   end)
 
-DevilFruit2:Toggle("Auto Store Fruit / Cất Trái",_G.AutoStoreFruit,function(value)
+DevilFruit2:Toggle("Auto Store Fruit",_G.AutoStoreFruit,function(value)
   _G.AutoStoreFruit = value
   end)
 
@@ -12811,7 +12811,7 @@ spawn(function()--store fruit
     end
 end)
 
-DevilFruit2:Toggle("Auto Bring Fruit / Gom Trái",_G.AutoBringFruit,function(value)
+DevilFruit2:Toggle("Auto Bring Fruit",_G.AutoBringFruit,function(value)
   _G.AutoBringFruit = value
   end)
 
@@ -12833,7 +12833,7 @@ spawn(function()
     end)
   end)
 
-DevilFruit2:Toggle("Teleport To Spawn Fruit / Nhặt Trái",false,function(value)
+DevilFruit2:Toggle("Teleport To Spawn Fruit",false,function(value)
   _G.Grabfruit = value
   end)
 
@@ -12915,7 +12915,7 @@ game:GetService("RunService").Stepped:Connect(function()
   end
   end)
 Page15:Slider(
-  "Fov Size / Độ Rộng Fov", true,
+  "Fov Size", true,
   0,
   1000,
   500,
@@ -12924,14 +12924,14 @@ Page15:Slider(
   SaveSettings()
   end)
 Page15:Toggle(
-  "Show Fov / Hiện Fov",
+  "Show Fov",
   _G.Settings.Combat["Show Fov"],
   function(value)
   _G.Settings.Combat["Show Fov"] = value
   end)
 
 Page15:Toggle(
-  "Aimbot Skill / Ngắm Skill ",
+  "Aimbot Skill",
   _G.Settings.Combat["Aimbot Skill"],
   function(value)
   _G.Settings.Combat["Aimbot Skill"] = value
@@ -13016,7 +13016,7 @@ mouse.Button1Down:Connect(function()
   end
   end)
 
-Page15:Toggle('Aimbot Gun / Ngắm Skill Súng', false, function(aimbotgunfunc)
+Page15:Toggle('Aimbot Gun', false, function(aimbotgunfunc)
   AimbotGun = aimbotgunfunc
   end)
 
@@ -13050,13 +13050,13 @@ for i,v in pairs(game.Players:GetChildren()) do
 table.insert(PlayerList ,v.Name)
 end
 
-local SelectedPly = Page15:Dropdown('Player List / Chọn Người', PlayerList, {
+local SelectedPly = Page15:Dropdown('Player List', PlayerList, {
   ""
 }, function(SelectPlyfunc)
   SelectPly = SelectPlyfunc
   end)
 
-Page15:Button('Refresh Player List / Làm Mới',function()
+Page15:Button('Refresh Player List',function()
   NewPlayerList = {}
   for i,v in pairs(game.Players:GetChildren()) do
   table.insert(NewPlayerList ,v.Name)
@@ -13065,7 +13065,7 @@ Page15:Button('Refresh Player List / Làm Mới',function()
   end)
 
 
-Page15:Toggle('Teleport to Player / Tp Đến Người Chơi', false, function(tptoplf)
+Page15:Toggle('Teleport to Player', false, function(tptoplf)
   TeleportPlayer = tptoplf
   pcall(function()
     if TeleportPlayer then
@@ -13078,7 +13078,7 @@ Page15:Toggle('Teleport to Player / Tp Đến Người Chơi', false, function(t
     end)
   end)
 
-Page15:Toggle('Spectated Player / Quan Sát', false, function(spectafunc)
+Page15:Toggle('Spectated Player', false, function(spectafunc)
   SpectatePlayer = spectafunc
   pcall(function()
     local plr1 = game:GetService("Players").LocalPlayer.Character.Humanoid
@@ -13090,7 +13090,7 @@ Page15:Toggle('Spectated Player / Quan Sát', false, function(spectafunc)
     end)
   end)
 
-Page15:Toggle('Kill Player with Melee / Kill Người = Cận Chiến', false, function(killplayermeleefunc)
+Page15:Toggle('Kill Player with Melee', false, function(killplayermeleefunc)
   KillPlayerMelee = killplayermeleefunc
 --CanceltoTarget(KillPlayerMelee)
   end)
@@ -13131,7 +13131,7 @@ spawn(function()
     end)
   end)
 
-Page15:Toggle('Kill Player with Devil Fruit / Kill Người = Trái', false, function(killplayfruitfunc)
+Page15:Toggle('Kill Player with Devil Fruit', false, function(killplayfruitfunc)
   KillPlayerFruit = killplayfruitfunc
   end)
 spawn(function()
@@ -13158,7 +13158,7 @@ spawn(function()
   end
   end)
 
-Page15:Toggle('Kill Player with Gun / Kill Người = Súng', false, function(killplaygunfunc)
+Page15:Toggle('Kill Player with Gun', false, function(killplaygunfunc)
   KillPlayerGun = killplaygunfunc
 
   end)
@@ -13208,7 +13208,7 @@ spawn(function()
 
 Page10:Seperator("World - Server")
 
-Page10:Button("Hop Server / Đổi Sv",function()
+Page10:Button("Hop Server",function()
   local PlaceID = game.PlaceId
   local AllIDs = {}
   local foundAnything = ""
@@ -13285,18 +13285,18 @@ Page10:Button("Travel to Third Sea / Sea 3", function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
   end)
 
-Page10:Button('Sea Beast / Thuỷ Quái', function()
+Page10:Button('Sea Beast', function()
   toTarget(game:GetService("Workspace")["_WorldOrigin"].Locations["Sea of Treats"].CFrame)
   end)
 
 Page10:Seperator("Island Teleport ")
 
 --// Island Teleport
-Page10:Button('Stop Tween / Dừng Tp', function()
+Page10:Button('Stop Tween', function()
   toTarget(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)
   end)
 if World1 then
-Page10:Dropdown("Select Island / Chọn Đảo", {
+Page10:Dropdown("Select Island", {
   "WindMill",
   "Marine",
   "Middle Town",
@@ -13321,7 +13321,7 @@ Page10:Dropdown("Select Island / Chọn Đảo", {
 end
 
 if World2 then
-Page10:Dropdown("Select Island / Chọn Đảo", {
+Page10:Dropdown("Select Island", {
   "The Cafe",
   "Frist Spot",
   "Dark Area",
@@ -13344,7 +13344,7 @@ Page10:Dropdown("Select Island / Chọn Đảo", {
 end
 
 if World3 then
-Page10:Dropdown("Select Island / Chọn Đảo", {
+Page10:Dropdown("Select Island", {
   "Mansion",
   "Port Town",
   "Great Tree",
@@ -13362,7 +13362,7 @@ Page10:Dropdown("Select Island / Chọn Đảo", {
   end)
 end
 
-Page10:Toggle("Teleport / Tp đến Đảo",false,function(value)
+Page10:Toggle("Teleport",false,function(value)
   _G.TeleportIsland = value
   if _G.TeleportIsland == true then
   repeat wait()
@@ -13467,7 +13467,7 @@ Page10:Toggle("Teleport / Tp đến Đảo",false,function(value)
 Page10:Seperator("NPC Teleport")
 
 if World1 then
-Page10:Dropdown("Select NPC / Chọn Npc", {
+Page10:Dropdown("Select NPC", {
   "Random Devil Fruit",
   "Blox Fruits Dealer",
   "Remove Devil Fruit",
@@ -13483,7 +13483,7 @@ Page10:Dropdown("Select NPC / Chọn Npc", {
 end
 
 if World2 then
-Page10:Dropdown("Select NPC / Chọn Npc", {
+Page10:Dropdown("Select NPC", {
   "Dargon Berath",
   "Mtsterious Man",
   "Mysterious Scientist",
@@ -13510,7 +13510,7 @@ Page10:Dropdown("Select NPC / Chọn Npc", {
 end
 
 if World3 then
-Page10:Dropdown("Select NPC / Chọn Npc", {
+Page10:Dropdown("Select NPC", {
   "Blox Fruits Dealer",
   "Remove Devil Fruit",
   "Horned Man",
@@ -13529,7 +13529,7 @@ Page10:Dropdown("Select NPC / Chọn Npc", {
   end)
 end
 
-Page10:Toggle("Teleport / Tp Đến Npc",_G.TeleportNPC,function(value)
+Page10:Toggle("Teleport",_G.TeleportNPC,function(value)
   _G.TeleportNPC = value
   if _G.TeleportNPC == true then
   repeat wait()
@@ -13678,11 +13678,11 @@ spawn(function()
   end
   end)
 
-Bote:Dropdown("Select Boats / Chọn Thuyền",BoatList,function(value)
+Bote:Dropdown("Select Boats",BoatList,function(value)
   SelectBoat = value
   end)
 
-Bote:Button("Buy Boat / Mua Thuyền",function()
+Bote:Button("Buy Boat",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyBoat",_G.SelectBoat)
   end)
 
@@ -13797,15 +13797,15 @@ local Bonesz = Tab4:CraftPage(1)
 
 Bonesz:Seperator("Bones")
 
-Bonesz:Button("Mua Surprise [ $50 Bone ]",function()
+Bonesz:Button("Buy Surprise [ $50 Bone ]",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Bones","Buy",1,1)
   end)
 
-Bonesz:Button("Stat Refund [ $50 Bone ] / Hoàn Trả Chỉ Số",function()
+Bonesz:Button("Stat Refund [ $50 Bone ]",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Bones","Buy",1,2)
   end)
 
-Bonesz:Button("Race Reroll [ $50 Bone ] / Đổi Tộc",function()
+Bonesz:Button("Race Reroll [ $50 Bone ]",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Bones","Buy",1,3)
   end)
 
@@ -13864,12 +13864,12 @@ local Statss = Tab4:CraftPage(2)
 
 Statss:Seperator("Stat")
 
-Statss:Button("Reset Stats (Use 2.5K Fragments) / Hoản Trả Chỉ Số", function()
+Statss:Button("Reset Stats (Use 2.5K Fragments)", function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Refund","1")
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Refund","2")
   end)
 
-Statss:Button("Random Race (Use 3K Fragments) / Đổi Tộc", function()
+Statss:Button("Random Race (Use 3K Fragments)", function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Reroll","1")
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Reroll","2")
   end)
@@ -13902,7 +13902,7 @@ Accces:Button("Tomoe Ring [ $500k Beli ]",function()
 
 local Racess = Tab4:CraftPage(2)
 Racess:Seperator("Race & etc")
-Racess:Button("Race Ghoul (Use 2.5K Fragments) / Mua Tộc quỷ",function()
+Racess:Button("Race Ghoul (Use 2.5K Fragments)",function()
   local args = {
     [1] = "Ectoplasm",
     [2] = "BuyCheck",
@@ -13917,7 +13917,7 @@ Racess:Button("Race Ghoul (Use 2.5K Fragments) / Mua Tộc quỷ",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
   end)
 
-Racess:Button("Race Cyborg (Use 2.5K Fragments) / Mua Tộc Cyborg",function()
+Racess:Button("Race Cyborg (Use 2.5K Fragments)",function()
   local args = {
     [1] = "CyborgTrainer",
     [2] = "Buy"
@@ -13926,7 +13926,7 @@ Racess:Button("Race Cyborg (Use 2.5K Fragments) / Mua Tộc Cyborg",function()
   end)
 
 Page11:Toggle(
-  "Auto Raids / Tự động Tập Kích",
+  "Auto Raids",
   _G.Settings.Raids["Auto Raids"],
   function(value)
   _G.Settings.Raids["Auto Raids"] = value
@@ -13938,7 +13938,7 @@ Page11:Toggle(
   SaveSettings()
   end)
 
-Page11:Dropdown("Select Raids / Chọn Raid",
+Page11:Dropdown("Select Raids",
   {
     "Flame","Ice","Quake","Light","Dark","Spider","Rumble","Magma","Buddha","Sand","Phoenix","Dough"
   }, {
@@ -13953,7 +13953,7 @@ Page11:Seperator(
   "Raids Configs")
 
 Page11:Toggle(
-  "Kill Aura / Giết quái",
+  "Kill Aura",
   _G.Settings.Raids["Kill Aura"],
   function(value)
   _G.Settings.Raids["Kill Aura"] = value
@@ -13961,7 +13961,7 @@ Page11:Toggle(
   end)
 
 Page11:Toggle(
-  "Auto Awake  / Nâng skill V2",
+  "Auto Awake",
   _G.Settings.Raids["Auto Awakened"],
   function(value)
   _G.Settings.Raids["Auto Awakened"] = value
@@ -13969,7 +13969,7 @@ Page11:Toggle(
   end)
 
 Page11:Toggle(
-  "Auto Next Island / Qua Đảo",
+  "Auto Next Island",
   _G.Settings.Raids["Auto Next Place"],
   function(value)
   _G.Settings.Raids["Auto Next Place"] = value
@@ -14122,12 +14122,12 @@ end)
 local MainUi = Tab5:CraftPage(1)
 MainUi:Seperator("Main - Ui")
 
-MainUi:Button("Open Devil Shop / Mở Cửa Hàng Trái",function()
+MainUi:Button("Open Devil Shop",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GetFruits")
   game:GetService("Players").LocalPlayer.PlayerGui.Main.FruitShop.Visible = true
   end)
 
-MainUi:Button("Open Title Name / Mở Danh Hiệu",function()
+MainUi:Button("Open Title Name",function()
   local args = {
     [1] = "getTitles"
   }
@@ -14135,18 +14135,18 @@ MainUi:Button("Open Title Name / Mở Danh Hiệu",function()
   game.Players.localPlayer.PlayerGui.Main.Titles.Visible = true
   end)
 
-MainUi:Button("Open Color Haki / Mở Màu Haki",function()
+MainUi:Button("Open Color Haki",function()
   game.Players.localPlayer.PlayerGui.Main.Colors.Visible = true
   end)
 
-MainUi:Button("Open Awakenings Expert / Mở Skill V2",function()
+MainUi:Button("Open Awakenings Expert",function()
   game.Players.LocalPlayer.PlayerGui.Main.AwakeningToggler.Visible = true
   end)
 
 local MainTeam = Tab5:CraftPage(1)
 MainTeam:Seperator("Main - Teams")
 
-MainTeam:Button("Join Pirates Team / Vào Hải Tặc", function()
+MainTeam:Button("Join Pirates Team", function()
   local args = {
     [1] = "SetTeam",
     [2] = "Pirates"
@@ -14158,7 +14158,7 @@ MainTeam:Button("Join Pirates Team / Vào Hải Tặc", function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
   end)
 
-MainTeam:Button("Join Marines Team / Vào Hải Quân",function()
+MainTeam:Button("Join Marines Team",function()
   local args = {
     [1] = "SetTeam",
     [2] = "Marines"
@@ -14173,7 +14173,7 @@ MainTeam:Button("Join Marines Team / Vào Hải Quân",function()
 local Abilis = Tab5:CraftPage(1)
 Abilis:Seperator("Abilities")
 
-Abilis:Toggle("Infinite Energy / Vô Hạn Năng Lượng",false,function(value)
+Abilis:Toggle("Infinite Energy",false,function(value)
   InfiniteEnergy = value
   originalstam = LocalPlayer.Character.Energy.Value
   end)
@@ -14197,7 +14197,7 @@ spawn(function()
   end
 end)
 
-Abilis:Toggle("Infinite Ability / Chạy Nhanh",true,function(infA)
+Abilis:Toggle("Infinite Ability",true,function(infA)
 if infA then
   local Agility = game:GetService("ReplicatedStorage").FX["Agility"]:Clone()
   Agility.Parent = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
@@ -14207,7 +14207,7 @@ if infA then
   end
   end)
 
-Abilis:Toggle("Infinite Obversation Range / Quan Sát Xa",getgenv().InfiniteObRange,function(value)
+Abilis:Toggle("Infinite Obversation Range",getgenv().InfiniteObRange,function(value)
   getgenv().InfiniteObRange = value
   local VS = game:GetService("Players").LocalPlayer.VisionRadius.Value
   while getgenv().InfiniteObRange do
@@ -14226,7 +14226,7 @@ Abilis:Toggle("Infinite Obversation Range / Quan Sát Xa",getgenv().InfiniteObRa
   end
   end)
 
-Abilis:Toggle("Infinite Geppo / Nhảy Vô Hạn",getgenv().InfGeppo,function(value)
+Abilis:Toggle("Infinite Geppo",getgenv().InfGeppo,function(value)
   getgenv().InfGeppo = value
   end)
 
@@ -14252,7 +14252,7 @@ spawn(function()
   end
   end)
 
-Abilis:Toggle("Infinite Soru / Dịch Chuyển Vô Hạn",getgenv().InfSoru,function(value)
+Abilis:Toggle("Infinite Soru",getgenv().InfSoru,function(value)
   getgenv().InfSoru = value
   end)
 
@@ -14282,7 +14282,7 @@ spawn(function()
 local Higlits = Tab5:CraftPage(1)
 Higlits:Seperator("Highlight")
 
-Higlits:Toggle("Show Chat disabled / Ẩn Chat", _G.chat, function(value)
+Higlits:Toggle("Show Chat disabled", _G.chat, function(value)
   _G.chat = value
   if _G.chat == true then
   local StarterGui = game:GetService('StarterGui')
@@ -14293,7 +14293,7 @@ Higlits:Toggle("Show Chat disabled / Ẩn Chat", _G.chat, function(value)
   end
   end)
 
-Higlits:Toggle("Show leaderboard disabled / Ẩn Leaderboard", _G.leaderboard, function(a)
+Higlits:Toggle("Show leaderboard disabled", _G.leaderboard, function(a)
   _G.leaderboard = a
   if _G.leaderboard == true then
   local StarterGui = game:GetService('StarterGui')
@@ -14304,7 +14304,7 @@ Higlits:Toggle("Show leaderboard disabled / Ẩn Leaderboard", _G.leaderboard, f
   end
   end)
 
-Higlits:Toggle("Highlight Mode / Tối Giản Giao Diện",false,function(value)
+Higlits:Toggle("Highlight Mode",false,function(value)
   if value == true then
   game:GetService("Players")["LocalPlayer"].PlayerGui.Main.Beli.Visible = false
   game:GetService("Players")["LocalPlayer"].PlayerGui.Main.HP.Visible = false
@@ -14414,7 +14414,7 @@ Higlits:Toggle("Đồ Hoạ",false,function(v)
   end
   end)
 
-Higlits:Toggle("Xray / Nhìn Xuyên",false,function(value)
+Higlits:Toggle("Xray",false,function(value)
   NoWorld = value
   if NoWorld == true then
   transparent = true
@@ -14459,11 +14459,11 @@ spawn(function()
   end
   end)
 
-Higlits:Toggle("Rainbow Haki / Bật Người Cầu Vòng",true,function(value)
+Higlits:Toggle("Rainbow Haki",true,function(value)
   RainbowHaki = value
   end)
 
-Higlits:Toggle("Rainbow Yoru / Kiếm Yoru Cầu Vòng",false,function(value)
+Higlits:Toggle("Rainbow Yoru",false,function(value)
   RainbowYoru = value
   end)
 
@@ -14518,7 +14518,7 @@ spawn(function()
 local Miscss = Tab5:CraftPage(1)
 Miscss:Seperator("Misc")
 
-Miscss:Toggle("Auto Haki / Tự Động Haki", true,function(vu)
+Miscss:Toggle("Auto Haki", true,function(vu)
   _G.AutoHakiBuso = vu
   end)
 
@@ -14550,7 +14550,7 @@ Miscss:Toggle("Anti AFK", true, function()
     end)
   end)
 
-Miscss:Toggle("Auto Rejoin / Tự Động Vào Lại",true,function(value)
+Miscss:Toggle("Auto Rejoin",true,function(value)
   _G.AutoRejoin = value
   end)
 
@@ -14566,14 +14566,14 @@ spawn(function()
   end
   end)
 
-Miscss:Toggle("No Clip / Xuyên Tường",_G.NoClip,function()
+Miscss:Toggle("No Clip",_G.NoClip,function()
   _G.NoClip = value
   end)
 
 local MainMobs = Tab5:CraftPage(2)
 MainMobs:Seperator("Main - Mob")
 
-MainMobs:Button("Remove Lava / Xoá Dung Nham",function()
+MainMobs:Button("Remove Lava",function()
   for i,v in pairs(game.Workspace:GetDescendants()) do
   if v.Name == "Lava" then
   v:Destroy()
@@ -14586,11 +14586,11 @@ MainMobs:Button("Remove Lava / Xoá Dung Nham",function()
   end
   end)
 
-MainMobs:Button("Invisible (lag) / Tàn Hình",function()
+MainMobs:Button("Invisible (lag)",function()
   game.Players.LocalPlayer.Character.LowerTorso.Root:Destroy()
   end)
 
-MainMobs:Button("Invisible [Remove] / Tắt Tàn Hình",function()
+MainMobs:Button("Invisible [Remove]",function()
   local removeNametags = true -- remove custom billboardgui nametags from hrp, could trigger anticheat
 
   local plr = game:GetService("Players").LocalPlayer
@@ -14625,13 +14625,13 @@ MainMobs:Button("Invisible [Remove] / Tắt Tàn Hình",function()
   end)
 
 
-MainMobs:Button("Max Zoom / zoom Siêu Xa", function()
+MainMobs:Button("Max Zoom", function()
   while wait() do
   game.Players.LocalPlayer.CameraMaxZoomDistance = 9223372036854718
   end
   end)
 
-MainMobs:Button("Buddha Big / Phật Khủng Lồ", function()
+MainMobs:Button("Buddha Big", function()
   local LocalPlayer = game:GetService("Players").LocalPlayer
   local Character = LocalPlayer.Character
   local Humanoid = Character:FindFirstChildOfClass("Humanoid")
@@ -14666,7 +14666,7 @@ MainMobs:Button("Buddha Big / Phật Khủng Lồ", function()
   wait(1)
   end)
 
-MainMobs:Button("Kaitun Cap / Hiện Vật Phẩm", function(value)
+MainMobs:Button("Kaitun Cap", function(value)
   local cac = require(game:GetService("Players").LocalPlayer.PlayerGui.Main.UIController.Inventory)
   local Inventory = game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventory")
   local Items = {}
@@ -14841,7 +14841,7 @@ MainMobs:Button("Kaitun Cap / Hiện Vật Phẩm", function(value)
 local States = Tab5:CraftPage(2)
 States:Seperator("State")
 
-States:Dropdown("Select Haki State / Chọn Cấp haki", {
+States:Dropdown("Select Haki State", {
   "State 0","State 1","State 2","State 3","State 4","State 5"},"",function(value)
   _G.SelectStateHaki = value
   end)
@@ -14875,7 +14875,7 @@ OldContrastc = c.Contrast
 OldTintColorc = c.TintColor
 OldTintColore = e.TintColor
 
-Booster:Toggle("RTX Mode / Đồ Hoạ Đẹp",_G.RTXMode,function(value)
+Booster:Toggle("RTX Mode",_G.RTXMode,function(value)
   _G.RTXMode = value
   if not _G.RTXMode then return end
   while _G.RTXMode do wait()
@@ -14905,7 +14905,7 @@ Booster:Toggle("RTX Mode / Đồ Hoạ Đẹp",_G.RTXMode,function(value)
   end
   end)
 
-Booster:Toggle("Super FPS boost / Giảm Lag",false,function(value)
+Booster:Toggle("Super FPS boost",false,function(value)
   _G.SuperFPSboost = value
   end)
 
@@ -14968,7 +14968,7 @@ spawn(function()
   end
 end)
 
-Booster:Button("FPS Boost / Giảm Lag Nhẹ",function()
+Booster:Button("FPS Boost",function()
   pcall(function()
     game:GetService("Lighting").FantasySky:Destroy()
     local g = game
@@ -15018,14 +15018,14 @@ Booster:Button("FPS Boost / Giảm Lag Nhẹ",function()
 
 
 
-Booster:Button("Unlock FPS / Mở Khoá Fps",function()
+Booster:Button("Unlock FPS",function()
   setfpscap(120)
 end)
 
 
 Booster:Seperator("Race Boost")
 
-Booster:Toggle("Auto Active Race / Bật tộc",_G.AutoAgility,function(value)
+Booster:Toggle("Auto Active Race",_G.AutoAgility,function(value)
   _G.AutoAgility = value
   end)
 
@@ -15039,7 +15039,7 @@ spawn(function()
     end)
   end)
 
-Booster:Toggle("Dodge No Cooldown / Lướt Vô Hạn",false,function(value)
+Booster:Toggle("Dodge No Cooldown",false,function(value)
   nododgecool = value
   NoDodgeCool()
 end)
