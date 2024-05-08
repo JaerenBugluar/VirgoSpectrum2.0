@@ -13616,23 +13616,23 @@ Page10:Toggle("Teleport",_G.TeleportNPC,function(value)
 local Abili = Tab4:CraftPage(1)
 Abili:Seperator("Abilities")
 
-Abili:Button("Mua Geppo [ $10K Beli ]",function()
+Abili:Button("Buy Geppo [ $10K Beli ]",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Geppo")
   end)
 
-Abili:Button("Mua Buso Haki [ $25K Beli ]",function()
+Abili:Button("Buy Buso Haki [ $25K Beli ]",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Buso")
   end)
 
-Abili:Button("Mua Soru [ $25 Beli ]",function()
+Abili:Button("Buy Soru [ $25 Beli ]",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Soru")
   end)
 
-Abili:Button("Mua Observation Haki [ $750K Beli ]",function()
+Abili:Button("Buy Observation Haki [ $750K Beli ]",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("KenTalk","Buy")
   end)
 
-Abili:Toggle("Mua Tất Cả Kĩ Năng", false, function(t)
+Abili:Toggle("Buy Haki's", false, function(t)
   Abilities = t
   while Abilities do wait(.1)
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Geppo")
@@ -13691,45 +13691,45 @@ local Style = Tab4:CraftPage(1)
 
 Style:Seperator("Fighting Style")
 
-Style:Button("Mua Black Leg [ $150K Beli ]",function()
+Style:Button("Buy Black Leg [ $150K Beli ]",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyBlackLeg")
   end)
 
-Style:Button("Mua Electro [ $550K Beli ]",function()
+Style:Button("Buy Electro [ $550K Beli ]",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectro")
   end)
 
-Style:Button("Mua Fishman Karate [ $750K Beli ]",function()
+Style:Button("Buy Fishman Karate [ $750K Beli ]",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyFishmanKarate")
   end)
 
-Style:Button("Mua Dragon Claw [ $1,500 Fragments ]",function()
+Style:Button("Buy Dragon Claw [ $1,500 Fragments ]",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","DragonClaw","1")
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","DragonClaw","2")
   end)
 
-Style:Button("Mua Superhuman [ $3M Beli ]",function()
+Style:Button("Buy Superhuman [ $3M Beli ]",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman")
   end)
 
-Style:Button("Mua Death Step [ $5K Fragments $5M Beli ]",function()
+Style:Button("Buy Death Step [ $5K Fragments $5M Beli ]",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep")
   end)
 
-Style:Button("Mua Sharkman Karate [ $5K ragments $2M.500K Beli ]",function()
+Style:Button("Buy Sharkman Karate [ $5K ragments $2M.500K Beli ]",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate",true)
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate")
   end)
 
-Style:Button("Mua Electric Claw [ $5K Fragments $3M Beli ]",function()
+Style:Button("Buy Electric Claw [ $5K Fragments $3M Beli ]",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw")
   end)
 
-Style:Button("Mua Dragon Talon [ $5K Fragments $3M Beli ]",function()
+Style:Button("Buy Dragon Talon [ $5K Fragments $3M Beli ]",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon")
   end)
 
-Style:Button("Mua God Human [ $5K Fragments $5M Beli ]",function()
+Style:Button("Buy God Human [ $5K Fragments $5M Beli ]",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman")
   end)
 -----Shop----------------
