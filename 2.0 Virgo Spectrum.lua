@@ -1,7 +1,6 @@
-local checker5 = loadstring(game:HttpGet("https://raw.githubusercontent.com/JaerenBugluar/ServerChecker/main/Server%20Status%20Checker.lua"))()
-
-wait(3)
-checker5()
+function checker5()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/JaerenBugluar/ServerChecker/main/Server%20Status%20Checker.lua"))()
+end
 
 repeat wait() until game:IsLoaded()
 repeat wait() until game:GetService("Players")
@@ -244,6 +243,7 @@ else
 end
 end
 
+checker5()
 LoadSettings()
 
 if not game:IsLoaded() then
