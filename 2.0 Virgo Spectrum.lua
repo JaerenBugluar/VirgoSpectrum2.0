@@ -1,5 +1,5 @@
 function checker5()
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/JaerenBugluar/ServerChecker/main/Server%20Status%20Checker.lua"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/JaerenBugluar/ServerChecker/main/ServerChecker2.lua"))()
 end
 
 repeat wait() until game:IsLoaded()
